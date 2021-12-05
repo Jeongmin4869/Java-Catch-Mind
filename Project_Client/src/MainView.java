@@ -198,28 +198,29 @@ public class MainView extends JFrame {
                        try{
                          //캐릭터
                           if(remove.equals("garlic")) {
-                             garlic= new ImageIcon("./src/garlic.png"); // 캐릭터 (마늘 쿵야)
+                             garlic= new ImageIcon(getClass().getClassLoader().getResource("garlic.png")); // 캐릭터 (마늘 쿵야)
                                JLabel garlic_lb = new JLabel(garlic);
                                garlic_lb.setBounds(0, 0, 200, 200); // 크기 200x200 픽셀
                                em_1.add(garlic_lb);
                                em_1.setBackground(Color.yellow);
                           }
                           else if(remove.equals("onion")) {
-                             onion= new ImageIcon("./src/onion.png"); // 캐릭터 (양파 쿵야)
+                             onion= new ImageIcon(getClass().getClassLoader().getResource("onion.png")); // 캐릭터 (양파 쿵야)
                                 JLabel onion_lb = new JLabel(onion);
                               onion_lb.setBounds(0, 0, 200, 200); // 크기 200x200 픽셀
                                em_2.add(onion_lb); 
                               em_2.setBackground(Color.green);
                           }
                           else if(remove.equals("mush")) {
-                             mushroom= new ImageIcon("./src/mushroom.png"); // 캐릭터 (버섯 쿵야)
+                        	  
+                             mushroom= new ImageIcon(getClass().getClassLoader().getResource("mushroom.png")); // 캐릭터 (버섯 쿵야)
                                 JLabel mushroom_lb = new JLabel(mushroom);
                               mushroom_lb.setBounds(0, 0, 200, 200); // 크기 200x200 픽셀
                                em_3.add(mushroom_lb); 
                               em_3.setBackground(Color.CYAN);
                           }
                           else if(remove.equals("celery")) {
-                             celery= new ImageIcon("./src/celery.png"); // 캐릭터 (샐러리 쿵야)
+                             celery= new ImageIcon(getClass().getClassLoader().getResource("celery.png")); // 캐릭터 (샐러리 쿵야)
                                JLabel celery_lb = new JLabel(celery);
                              celery_lb.setBounds(0, 0, 200, 200); 
                              em_4.add(celery_lb);
@@ -236,28 +237,28 @@ public class MainView extends JFrame {
                        try{
                          //캐릭터
                           if(remove.equals("garlic")) {
-                             garlic= new ImageIcon("./src/garlic.png"); // 캐릭터 (마늘 쿵야)
+                             garlic= new ImageIcon(getClass().getClassLoader().getResource("garlic.png")); // 캐릭터 (마늘 쿵야)
                                JLabel garlic_lb = new JLabel(garlic);
                                garlic_lb.setBounds(0, 0, 200, 200); // 크기 200x200 픽셀
                                em_1.add(garlic_lb);
                                em_1.setBackground(Color.yellow);
                           }
                           else if(remove.equals("onion")) {
-                             onion= new ImageIcon("./src/onion.png"); // 캐릭터 (양파 쿵야)
+                             onion= new ImageIcon(getClass().getClassLoader().getResource("onion.png")); // 캐릭터 (양파 쿵야)
                                 JLabel onion_lb = new JLabel(onion);
                               onion_lb.setBounds(0, 0, 200, 200); // 크기 200x200 픽셀
                                em_2.add(onion_lb); 
                               em_2.setBackground(Color.green); 
                             }
                           else if (remove.equals("mush")) {
-                             mushroom= new ImageIcon("./src/mushroom.png"); // 캐릭터 (샐러리쿵야)
+                             mushroom= new ImageIcon(getClass().getClassLoader().getResource("mushroom.png")); // 캐릭터 (샐러리쿵야)
                                 JLabel mushroom_lb = new JLabel(mushroom);
                               mushroom_lb.setBounds(0, 0, 200, 200); // 크기 200x200 픽셀
                                em_3.add(mushroom_lb); 
                               em_3.setBackground(Color.CYAN);
                           }
                           else if (remove.equals("celery")) {
-                             celery= new ImageIcon("./src/celery.png"); // 캐릭터 (샐러리쿵야)
+                             celery= new ImageIcon(getClass().getClassLoader().getResource("celery.png")); // 캐릭터 (샐러리쿵야)
                                JLabel celery_lb = new JLabel(celery);
                              celery_lb.setBounds(0, 0, 200, 200); 
                              em_4.add(celery_lb);
@@ -451,12 +452,11 @@ public class MainView extends JFrame {
         gui_panel.setBackground(new Color(195,195,195)); // 패널의 배경색을 회색으로 지정
         gui_panel.setLayout(null); 
         // gui_panel의 레이아웃을 null지정하여 컴포넌트들의 위치를 직접 지정
-
-        pencil_im = new ImageIcon("./src/pencil.png");
+        pencil_im = new ImageIcon(getClass().getClassLoader().getResource("pencil.png"));
         pencil_bt = new JButton("",pencil_im); // 연필 버튼 생성
-        eraser_im = new ImageIcon("./src/eraser.png");
+        eraser_im = new ImageIcon(getClass().getClassLoader().getResource("eraser.png"));
         eraser_bt = new JButton("",eraser_im); // 지우개 버튼 생성
-        color_im = new ImageIcon("./src/color.png");
+        color_im = new ImageIcon(getClass().getClassLoader().getResource("color.png"));
         colorSelect_bt = new JButton("",color_im); // 선색상 버튼 생성
         
         thicknessInfo_label = new JLabel("도구굵기"); 
@@ -494,19 +494,19 @@ public class MainView extends JFrame {
         
         // paint_panel의 이미지 추가 
         // time over
-        timeover = new ImageIcon("./src/timeover.png");
+        timeover = new ImageIcon(getClass().getClassLoader().getResource("timeover.png"));
         timeover_lb = new JLabel(timeover);
         timeover_lb.setBounds(0, 0, 900, 460);
         paint_panel.add(timeover_lb);
         timeover_lb.setVisible(false);
         // 정답을 맞췄을 경우
-        correct = new ImageIcon("./src/correct.png");
+        correct = new ImageIcon(getClass().getClassLoader().getResource("correct.png"));
         correct_lb = new JLabel(correct);
         correct_lb.setBounds(0, 0, 900, 460);
         paint_panel.add(correct_lb);
         correct_lb.setVisible(false);
         // game over
-        gameover = new ImageIcon("./src/gameover.png");
+        gameover = new ImageIcon(getClass().getClassLoader().getResource("gameover.png"));
         gameover_lb = new JLabel(gameover);
         gameover_lb.setBounds(0, 0, 900, 460);
         paint_panel.add(gameover_lb);
@@ -628,7 +628,7 @@ public class MainView extends JFrame {
         js.setViewportView(chat_window);
         chat_field = new JTextField();
         chat_field.setBounds(0,210,830,40);
-        trans_im = new ImageIcon("./src/trans.png");
+        trans_im = gameover = new ImageIcon(getClass().getClassLoader().getResource("trans.png"));
         transmission = new JButton("",trans_im);
         transmission.setBounds(830, 210, 70, 40);
         chat_panel.add(js);
@@ -637,7 +637,7 @@ public class MainView extends JFrame {
         chat_panel.setBounds(300,670,900,250);
         
         // 버튼
-        pink_bt = new ImageIcon("./src/pink_bt.png");
+        pink_bt = new ImageIcon(getClass().getClassLoader().getResource("pink_bt.png"));
         ready_bt = new JButton("",pink_bt); // 준비 (핑크)
         ready_bt.setBounds(1260,740,200,50);
         add(ready_bt);

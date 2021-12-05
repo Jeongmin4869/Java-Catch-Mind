@@ -47,8 +47,8 @@ public class Client extends JFrame {
       setContentPane(contentPane);
       contentPane.setLayout(null);
       
-      pink_bt = new ImageIcon("./src/pink_bt.png");
-      mint_bt = new ImageIcon("./src/mint_bt.png");
+      pink_bt = new ImageIcon(getClass().getClassLoader().getResource("pink_bt.png"));
+      mint_bt = new ImageIcon(getClass().getClassLoader().getResource("mint_bt.png"));
       JButton btnNewButton = new JButton("", pink_bt);
       btnNewButton.setBounds(420, 360, 200, 50);
       contentPane.add(btnNewButton);
@@ -67,7 +67,7 @@ public class Client extends JFrame {
        select_char1 = new JPanel();
        select_char1.setLayout(null);
        select_char1.setBackground(Color.YELLOW);
-       garlic = new ImageIcon("./src/garlic.png"); // Ä³¸¯ÅÍ (¸¶´ÃÄô¾ß)
+       garlic = new ImageIcon(getClass().getClassLoader().getResource("garlic.png")); // Ä³¸¯ÅÍ (¸¶´ÃÄô¾ß)
        JLabel garlic_lb = new JLabel(garlic);
        garlic_lb.setBounds(0, 0, 200, 200); // Å©±â 200x200 ÇÈ¼¿
        select_char1.add(garlic_lb);
@@ -85,7 +85,7 @@ public class Client extends JFrame {
         select_char2 = new JPanel();
         select_char2.setLayout(null);
         select_char2.setBackground(Color.GREEN);
-        onion = new ImageIcon("./src/onion.png"); // Ä³¸¯ÅÍ (¾çÆÄÄô¾ß)
+        onion = new ImageIcon(getClass().getClassLoader().getResource("onion.png")); // Ä³¸¯ÅÍ (¾çÆÄÄô¾ß)
         JLabel onion_lb = new JLabel(onion);
         onion_lb.setBounds(0, 0, 200, 200);
         select_char2.add(onion_lb);
@@ -103,7 +103,7 @@ public class Client extends JFrame {
         select_char3 = new JPanel();
         select_char3.setLayout(null);
         select_char3.setBackground(Color.CYAN);
-        mushroom = new ImageIcon("./src/mushroom.png"); // Ä³¸¯ÅÍ (¹ö¼¸Äô¾ß)
+        mushroom = new ImageIcon(getClass().getClassLoader().getResource("mushroom.png")); // Ä³¸¯ÅÍ (¹ö¼¸Äô¾ß)
         JLabel mushroom_lb = new JLabel(mushroom);
         mushroom_lb.setBounds(0, 0, 200, 200); // Å©±â 200x200 ÇÈ¼¿
         select_char3.add(mushroom_lb);
@@ -121,7 +121,7 @@ public class Client extends JFrame {
         select_char4 = new JPanel();
         select_char4.setLayout(null);
         select_char4.setBackground(Color.PINK);
-        celery = new ImageIcon("./src/celery.png"); // Ä³¸¯ÅÍ (»ø·¯¸®Äô¾ß)
+        celery = new ImageIcon(getClass().getClassLoader().getResource("celery.png")); // Ä³¸¯ÅÍ (»ø·¯¸®Äô¾ß)
         JLabel celery_lb = new JLabel(celery);
         celery_lb.setBounds(0, 0, 200, 200); // Å©±â 200x200 ÇÈ¼¿
         select_char4.add(celery_lb);

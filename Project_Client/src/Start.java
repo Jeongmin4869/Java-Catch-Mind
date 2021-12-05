@@ -30,7 +30,7 @@ public class Start extends JFrame {
       contentPane = new JPanel();
       
       // ¿ÃπÃ¡ˆ
-      catchmind = new ImageIcon("./src/catchmind.png");
+      catchmind = new ImageIcon(getClass().getClassLoader().getResource("catchmind.png"));
       catchmind_lb = new JLabel(catchmind);
       catchmind_lb.setBounds(0,0,800,572);
       contentPane.add(catchmind_lb);
@@ -38,9 +38,9 @@ public class Start extends JFrame {
       contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
       setContentPane(contentPane);
       contentPane.setLayout(null);
-
-      pink_bt = new ImageIcon("./src/pink_bt.png");
-      mint_bt = new ImageIcon("./src/mint_bt.png");
+      new ImageIcon(getClass().getClassLoader().getResource("mint_bt.png"));
+      pink_bt = new ImageIcon(getClass().getClassLoader().getResource("pink_bt.png"));
+      mint_bt = new ImageIcon(getClass().getClassLoader().getResource("mint_bt.png"));
       JButton btnNewButton = new JButton("", pink_bt);
       btnNewButton.setBounds(300, 450, 200, 50);
       contentPane.add(btnNewButton);
